@@ -1,0 +1,215 @@
+$primaryColor: #F29F1B;
+$secondaryColor: #b45c1c;
+$bg: #333;
+$font: 'Times New Roman', Times, serif;
+
+@mixin input_felt {
+    width: 48%;
+    padding: 1em;
+    border: #000 1px solid;
+    border-radius: 5px;
+    font-family: $font;
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+main{
+    min-height: 10em;
+    padding: 3em 2em;
+
+    p {
+        margin: 1em 0 0.5em 0;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+
+.active{
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+}
+
+a{
+    color: $primaryColor;
+    font-family: $font;
+    font-size: 20px;
+    margin-right: 1em;
+    text-decoration: none;
+    border: none;
+    padding: 1em;
+}
+
+
+nav a{
+    border: 1px solid transparent;
+}
+
+nav a:hover{
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+}
+
+header{
+    background-color: $bg;
+    height: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    max-width: 90px;
+    margin: 0.5em, 0.5em, 0.5em, 0;
+}
+
+footer{
+    background-color: $bg;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.fP{
+    color: $primaryColor;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ----------- INDEX ------------------------------
+
+.btn{
+    background-color: $primaryColor;
+    padding: 1em;
+    color: white;
+    margin-top: 0.5em;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: $secondaryColor;
+}
+
+
+
+
+/*-----------Kontaktform-----------*/
+
+.contact-main {
+    background: rgb(209,141,70);
+    background: linear-gradient(360deg, rgba(209,141,70,1) 0%, rgba(112,112,112,1) 100%);
+} 
+
+.contact-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 1em 1em;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 2em;
+
+        h1 {
+            font-size: 30px;
+            margin-top: 1em;
+            font-family: $font;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 1em 0 1.5em 0;
+            font-family: $font;
+        }
+
+        .contact-info1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                width: 48%;
+                padding: 1em;
+                border: #000 1px solid;
+                border-radius: 5px;
+                font-family: $font;
+            }
+
+        }
+
+        .contact-info2 {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin: 1.5em 0;
+                width: 100%;
+                padding: 1em;
+                border: #000 1px solid;
+                border-radius: 5px;
+                font-family: $font;
+            }
+
+            textarea {
+                width: 100%;
+                padding: 1em;
+                border: #000 1px solid;
+                border-radius: 5px;
+                font-family: $font;
+            }
+        }
+        button {
+            width: 100%;
+            padding: 1em 0;
+            font-size: 14px;
+            background-color: $primaryColor;
+            color: #fff;
+            border-radius: 10px;
+            margin-top: 1em;
+            border: $primaryColor 1px solid;
+        }
+
+        button:hover{
+            background-color: $secondaryColor;
+            border: $secondaryColor 1px solid;
+        }
+    }
+}
+
+/* ----------- LOGIN -------------------------- */
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1em 1em;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2em;
+
+    input {
+        @include input_felt();
+    }
+}
